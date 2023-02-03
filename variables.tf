@@ -1,26 +1,49 @@
-variable "app" {
-  type        = string
-  description = "the name of the application expressed as an acronym"
-  sensitive   = false
+variable "cidr_blocks" {
+  type        = list(string)
+  description = "list of cidr blocks to allow inbound traffic from, or outbound traffic to"
+  default     = null
 }
 
-variable "env" {
+variable "description" {
   type        = string
-  description = "the target tier ('dev', 'qa', 'stage', or 'prod'.)"
-  sensitive   = false
-
-  validation {
-    condition     = contains(["dev", "qa", "stage", "prod", "nonprod"], var.env)
-    error_message = "valid values are 'dev', 'qa', 'stage', 'prod', and 'nonprod'"
-  }
+  description = "description of the rule"
 }
-variable "program" {
-  type        = string
-  description = "the program associated with the application"
-  sensitive   = false
 
-  validation {
-    condition     = contains(["crdc", "ccdi", "ctos"], var.program)
-    error_message = "valid values for program are 'crdc', 'ccdi', and 'ctos'"
-  }
+variable "from_port" {
+  type        = number
+  description = "start of the range in which to allow inbound or outbound traffic"
+}
+
+variable "prefix_list_ids" {
+  type        = list()
+  description = "list of prefix list ids"
+  default     = null
+}
+
+variable "to_port" {
+  type        = number
+  description = "end of the range in which to allow inbound or outbound traffic"
+}
+
+variable "security_group_id" {
+  type        = string
+  description = "security group to apply this rule to"
+  default     = null
+}
+
+variable "self" {
+  type        = bool
+  description = "whether the security group itself will be added as a source to this ingress rule"
+  default     = null
+}
+
+variable "source_security_group_id" {
+  type        = string
+  description = "id of the security group to allow inbound traffic from, or outbound access to"
+  default     = null
+}
+
+variable "type" {
+  type        = string
+  description = "type of rule - either 'inbound' or 'outbound'"
 }
