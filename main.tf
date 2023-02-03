@@ -10,6 +10,3 @@ resource "aws_security_group_rule" "this" {
   cidr_blocks              = var.cidr_blocks
   source_security_group_id = var.source_security_group_id
 }
-
-
-
