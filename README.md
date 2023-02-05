@@ -40,7 +40,7 @@ No modules.
 | <a name="input_self"></a> [self](#input\_self) | whether the security group itself will be added as a source to this ingress rule | `bool` | `null` | no |
 | <a name="input_source_security_group_id"></a> [source\_security\_group\_id](#input\_source\_security\_group\_id) | id of the security group to allow inbound traffic from, or outbound access to | `string` | `null` | no |
 | <a name="input_to_port"></a> [to\_port](#input\_to\_port) | end of the range in which to allow inbound or outbound traffic | `number` | n/a | yes |
-| <a name="input_type"></a> [type](#input\_type) | type of rule - either 'inbound' or 'outbound' | `string` | n/a | yes |
+| <a name="input_type"></a> [type](#input\_type) | type of rule - either 'ingress' or 'egress' | `string` | n/a | yes |
 
 # Outputs
 
