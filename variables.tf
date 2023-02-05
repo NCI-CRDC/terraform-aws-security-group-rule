@@ -14,12 +14,6 @@ variable "from_port" {
   description = "start of the range in which to allow inbound or outbound traffic"
 }
 
-variable "prefix_list_ids" {
-  type        = list()
-  description = "list of prefix list ids"
-  default     = null
-}
-
 variable "to_port" {
   type        = number
   description = "end of the range in which to allow inbound or outbound traffic"

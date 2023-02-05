@@ -35,7 +35,6 @@ No modules.
 | <a name="input_cidr_blocks"></a> [cidr\_blocks](#input\_cidr\_blocks) | list of cidr blocks to allow inbound traffic from, or outbound traffic to | `list(string)` | `null` | no |
 | <a name="input_description"></a> [description](#input\_description) | description of the rule | `string` | n/a | yes |
 | <a name="input_from_port"></a> [from\_port](#input\_from\_port) | start of the range in which to allow inbound or outbound traffic | `number` | n/a | yes |
-| <a name="input_prefix_list_ids"></a> [prefix\_list\_ids](#input\_prefix\_list\_ids) | list of prefix list ids | `list()` | `null` | no |
 | <a name="input_security_group_id"></a> [security\_group\_id](#input\_security\_group\_id) | security group to apply this rule to | `string` | `null` | no |
 | <a name="input_self"></a> [self](#input\_self) | whether the security group itself will be added as a source to this ingress rule | `bool` | `null` | no |
 | <a name="input_source_security_group_id"></a> [source\_security\_group\_id](#input\_source\_security\_group\_id) | id of the security group to allow inbound traffic from, or outbound access to | `string` | `null` | no |
