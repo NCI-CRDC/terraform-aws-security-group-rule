@@ -45,5 +45,5 @@ variable "source_security_group_id" {
 
 variable "type" {
   type        = string
-  description = "type of rule - either 'inbound' or 'outbound'"
+  description = "type of rule - either 'ingress' or 'egress'"
 }
