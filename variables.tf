@@ -14,6 +14,11 @@ variable "from_port" {
   description = "start of the range in which to allow inbound or outbound traffic"
 }
 
+variable "protocol" {
+  type = string 
+  description = "the protocol to allow ingress or egress traffic to flow through the security group as defined by this rule"
+}
+
 variable "to_port" {
   type        = number
   description = "end of the range in which to allow inbound or outbound traffic"
